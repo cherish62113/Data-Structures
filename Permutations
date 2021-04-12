@@ -1,0 +1,19 @@
+void perm(char *list, int i ,int n)
+{
+  int j, temp;
+  if(i==n)
+   {
+    for(j=0; j<=n ;j++)
+      print("%c",list[j]);
+    printf(" ");
+   }
+  else
+   {
+    for(j=i; j <= n; j++)
+     {
+    swap(list[i],list[j],temp);
+    perm(list,i+1,n);
+    Swap(list[i],list[j],temp);
+     }
+   }
+}
